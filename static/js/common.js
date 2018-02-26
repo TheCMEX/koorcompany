@@ -75,10 +75,27 @@ $(function() {
 
 
 
-$(".spincrement").spincrement();
+// Инициализируем плагин spincrement.js, чтобы анимировать числа
+// $(".spincrement").spincrement();
 
-
-// СЛАЙДЕР
+// Скрипт, позволяющий начинать анимацию при прокрутке страницы
+	$(function () {
+		var target_block = $(".spincrement"); // Ищем блок
+		var blockStatus = true;
+		$(window).scroll(function() {
+			var scrollEvent = ($(window).scrollTop() > (target_block.position().top - $(window).height()));
+			if(scrollEvent && blockStatus) {
+				blockStatus = false; // Запрещаем повторное выполнение функции до следующей перезагрузки страницы.
+				$({numberValue: 0}).animate({numberValue: 1000}, {
+					duration: 1200, // Скорость анимации, где 500 - 0.5 одной секунды, то есть 500 миллисекунд
+					easing: "linear",
+					step: function(val) {
+						$(".spincrement").html(Math.ceil(val)); // Блок, где необходимо сделать анимацию
+					}
+				});
+			}
+		});
+	});
 
 
 

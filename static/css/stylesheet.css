@@ -94,23 +94,7 @@ body{
 
 /*Делаем лёгкий градиент на блоке с услугами*/
 .diensten{
-    /* IE10+ */
-    background-image: -ms-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
-
-    /* Mozilla Firefox */
-    background-image: -moz-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
-
-    /* Opera */
-    background-image: -o-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
-
-    /* Webkit (Safari/Chrome 10) */
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E4E4E4), color-stop(100, #FFFFFF));
-
-    /* Webkit (Chrome 11+) */
-    background-image: -webkit-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
-
-    /* W3C Markup */
-    background-image: linear-gradient(to bottom, #E4E4E4 0%, #FFFFFF 100%);
+background-image: linear-gradient(to bottom, #eeeeee, #f2f2f2, #f6f6f6, #fbfbfb, #ffffff);
 
     padding-bottom: 1%;
     padding-top: 2.7%
@@ -177,4 +161,32 @@ a.btn{
 a.btn:hover{
     background-image: linear-gradient(to bottom, #c03577, #b12d6e, #a32564, #951c5b, #871352);
     color: white;
+}
+
+/*БЛОК ОТЗЫВОВ КЛИЕНТОВ*/
+
+/*Настройки размера текста отзыва и расстояния от предыдущего блока*/
+.opinion{
+    font-size: 1.5vw;
+    padding-top: 3%;
+}
+
+/*Размер и закруглённость картинки*/
+.opinionImg{
+    width:50%;
+    border-radius: 120px;
+}
+
+/*Настроки размера шрифта имени и расстояние до следующего блока*/
+.name{
+    font-size: 1.2vw;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+.carousel-control-next-icon{
+    background-image: url("/static/images/rightSide.png")
+}
+.carousel-control-prev-icon{
+    /*background-image: url("/static/images/left.png");*/
 }
