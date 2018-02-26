@@ -1,0 +1,180 @@
+/*Сюда добавляем дополнительные шрифты*/
+@font-face {
+    font-family: RalewayBold; /* Гарнитура шрифта */
+    src: url(/static/fonts/RalewayBold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: RalewayMedium; /* Гарнитура шрифта */
+    src: url(/static/fonts/RalewayMedium.ttf); /* Путь к файлу со шрифтом */
+}
+
+body{
+    font-family: RalewayMedium;
+}
+
+/*Задаём вращение значку Play на главной страничке, можно изменять скорость вращения и градус*/
+.rotateImg{
+	-o-transition: transform 0.3s linear;
+	-ms-transition: transform 0.3s linear;
+	-moz-transition: transform 0.3s linear;
+	-webkit-transition: transform 0.3s linear;
+	transition: transform 0.3s linear;
+}
+.rotateImg:hover {
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/*Делаем увеличение пунктам меню при наведении*/
+.navbar-nav{
+    font-size: 1.3vw;
+    line-height: 2%;
+}
+.nav-link:hover{
+        -moz-transform: scale(1.2,1.2);
+        -webkit-transform: scale(1.2,1.2);
+}
+
+/*БЛОК С ЦИФРАМИ*/
+
+.padding-top-numbers{
+    padding-top: 3%;
+    font-size: 5vw;
+    font-family: RalewayBold;
+}
+.numbers-bg{
+    background: #ffffff; /* Old Browsers */
+    background: -webkit-linear-gradient(top,#ffffff,#e2e2e2); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top,#ffffff,#e2e2e2); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top,#ffffff,#e2e2e2); /*Fx 3.6-15*/
+    background: linear-gradient(to bottom, #ffffff, #e2e2e2); /*Standard*/
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.text-size{
+    font-size: 2vw;
+}
+.numbers{
+    padding-bottom: 3%;
+}
+
+/*Делаем разделение между блоками посредством использования тени*/
+.effect6{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect6:after{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+    -moz-transform:skew(8deg) rotate(3deg);
+    -ms-transform:skew(8deg) rotate(3deg);
+    -o-transform:skew(8deg) rotate(3deg);
+    transform:skew(8deg) rotate(3deg);
+}
+
+/*DIENSTEN*/
+
+/*Делаем лёгкий градиент на блоке с услугами*/
+.diensten{
+    /* IE10+ */
+    background-image: -ms-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
+
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
+
+    /* Opera */
+    background-image: -o-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E4E4E4), color-stop(100, #FFFFFF));
+
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(top, #E4E4E4 0%, #FFFFFF 100%);
+
+    /* W3C Markup */
+    background-image: linear-gradient(to bottom, #E4E4E4 0%, #FFFFFF 100%);
+
+    padding-bottom: 1%;
+    padding-top: 2.7%
+}
+.dienstenTitle{
+    font-size: 3vw;
+}
+.colorElan{
+    color: rgb(228, 9, 127);
+}
+.korenDiensten{
+    font-size: 2.3vw;
+}
+.paddingTop{
+    margin-top: 2%;
+}
+
+/*Делаем видео адаптивным, для этого нужно просто присвоить этот класс видео*/
+.thumb-wrap {
+    position:relative;
+    padding-bottom:25%;/*пропорции видео 16:9 */
+    padding-top:1%;
+    height:0;
+}
+.thumb-wrap iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:90%;
+    height: 100%;
+}
+
+/*Настраиваем видео закруглённые углы*/
+iframe{
+    border-radius: 5px;
+}
+
+.description{
+    padding-top: 58%;
+    font-size: 1.3vw;
+    padding-bottom: 2%;
+}
+
+/*Тень снизу*/
+.effect1{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+.paddingBottom{
+    padding-bottom: 17%;
+}
+
+/*Дизайн всех кнопок*/
+a.btn{
+    background-image: linear-gradient(to bottom, #d3327e, #c52b76, #b7246f, #a91d67, #9c165f);
+    color: white;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+a.btn:hover{
+    background-image: linear-gradient(to bottom, #c03577, #b12d6e, #a32564, #951c5b, #871352);
+    color: white;
+}

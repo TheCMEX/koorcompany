@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}KoorCompany{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+</head>
+<body style="font-family: RalewayMedium">
+    <header>
+        <!-- Задаём видеофон -->
+        <div id="phone_video" style="position: absolute; overflow: hidden; width: 100%; height:100%; display:block;">
+            <video loop muted autoplay poster="/static/images/Popkoor-Elan-1-800x420.jpg" class="fullscreen-bg__video"
+                   id="bgvid">
+                {#            <source src="/static/video/big_buck_bunny.webm" type="video/webm">#}
+                <source src="/static/video/phone_video" type="video/mp4">
+                {#            <source src="video/big_buck_bunny.ogv" type="video/ogg">#}
+            </video>
+        </div>
+
+        <div class="firstWindowContent" style=" position: relative; color: white; background-color: rgba(0, 0, 0, 0.5)">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-xl navbar-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="/static/images/logo.png" alt="" width="200"
+                                                          style="margin-left: 9%"></a>
+                    <div class="col-xl"></div>
+                    <div class="col-xl-6 collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="active" style="margin-right: 4%">
+                                <a class="nav-link" href="#">PopkoorElan</a>
+                            </li>
+                            <li class="active" style="margin-right: 4%">
+                                <a class="nav-link" href="#">Zangreizen</a>
+                            </li>
+                            <li class=" active" style="margin-right: 4%">
+                                <a class="nav-link" href="#">Maestro's</a>
+                            </li>
+                            <li class=" active" style="margin-right: 4%">
+                                <a class="nav-link" href="#">Nieuws</a>
+                            </li>
+                            <li class=" active">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="col-xl">
+                    </div>
+                    <div class="col-xl-10">
+                        <div style="margin-top: 15%; text-align: center; font-family: RalewayBold">
+                            <p style="font-size: 4vw;"><span style="color: rgb(228, 9, 127)">Zing,</span> Beleef,
+                                Geniet<span style="color: rgb(228, 9, 127)">!</span></p>
+                            <p style="font-size: 3vw">Met Popkoor Elan en zangreizen</p>
+                        </div>
+                        <div id="playVideoIcon">
+                            <a href="" style="text-decoration: none" data-toggle="modal" data-target="#exampleModalCenter">
+                                <img id="rotateImg" class="rotateImg" style="display: block; margin: 0 auto; margin-top: 9%; width: 10%" src="/static/images/playVideoIcon.png" alt="Lees meer">
+                            </a>
+                        </div>
+                        <p style=" padding-bottom: 4.4%; color: white; font-size: 2vw; text-align: center; padding-top: 0.7%">
+                                Kijk video over ons!</p>
+
+                        <!-- Модальное окно с выплывающим видео-->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content text-center">
+                                        <iframe width="800" height="450" src="https://www.youtube.com/embed/mnL_B89juJY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Блок с цифрами -->
+
+    <div class="numbers numbers-bg effect6">
+        <div class="container-fluid">
+            <div class="text-center">
+                <div class="row text-center padding-top-numbers">
+                    <div class="col-xl-4">
+                        7
+                    </div>
+                    <div class="col-xl-4">
+                        8
+                    </div>
+                    <div class="col-xl-4">
+                        500+
+                    </div>
+                </div>
+                <div class="row text-size">
+                    <div class="col-xl-4">
+                        Koren
+                    </div>
+                    <div class="col-xl-4">
+                        Jaar
+                    </div>
+                    <div class="col-xl-4">
+                        Tevreden mensen
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок с услугами -->
+
+    <div class="diensten">
+        <!-- Заголовок -->
+        <div class="text-center dienstenTitle colorElan">
+            <div>
+                Wil je uitrusten?
+            </div>
+            <div style="font-size: 2.7vw">
+                Probeer dan met ons!
+            </div>
+        </div>
+        <!-- Услуги -->
+        <div class="container-fluid paddingTop">
+            <div class="row text-center effect1 paddingBottom">
+                <div class="col-xl-6 thumb-wrap">
+                    <h1 class="korenDiensten">Zing in koren</h1>
+                    <!-- Настраиваю описание услуги -->
+                    <h1 class="description">Lorem ipsum dolor ares hier moet iets nog zijn. En dat zou echt een mooie website zijn.</h1>
+                    <iframe src="https://www.youtube.com/embed/mnL_B89juJY" frameborder="0" allow="encrypted-media" allowfullscreen style="margin-top: 10%; margin-left: 5%"></iframe>
+                    <a class="btn btn-lg" href="#" role="button">Lees meer</a>
+                </div>
+                <div class="col-xl-6 thumb-wrap">
+                    <h1 class="korenDiensten">Sing & Travel</h1>
+                    <!-- Настраиваю описание услуги -->
+                    <h1 class="description">Lorem ipsum dolor ares hier moet iets nog zijn. En dat zou echt een mooie website zijn.</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FUs5mf4_ycQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="margin-top: 10%; margin-left: 5%;"></iframe>
+                    <a class="btn btn-lg" href="#" role="button">Lees meer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок с отзывами -->
+
+{#    <div class="opinion">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                .col-xl-#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <!-- Wow JS -->
+<script src="/static/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+{% block javascript %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/static/js/jquery.spincrement.min.js"></script>
+    <script type="text/javascript" src="/static/js/common.js"></script>
+{% endblock %}
+</body>
+</html>
